@@ -21,7 +21,7 @@ for path in paths:
 
 
 
-for i in range(int(len(Song_ID)/100)+1):
+for i in range(2):#range(int(len(Song_ID)/100)+1):
     # Serializing json
     json_object = dumps(Song_ID[100*i:100*(i+1)])
 
