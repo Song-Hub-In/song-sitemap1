@@ -7,5 +7,6 @@ do
     git add -A --verbose
     git commit -m "$FILE"
     git push
+    rm $FILE
 done
 
