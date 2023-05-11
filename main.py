@@ -17,7 +17,7 @@ for path in paths:
 # This Will Return The SongId As List
 # The SiteMap Contains The Song URL
 # With The Help Of Request Liberay We Get The Song URL From that We use split Function and Extract thr id
-if len(os.listdir("sitemap/")) > 10:
+if len(os.listdir("sitemap/")) < 10:
     x = get("https://www.hungama.com/sitemap/song/song-sitemap"+str(sitemap)+".xml",allow_redirects=False)
     soup = BeautifulSoup(x.text, "xml")
     Song_ID = [str(str(j).split("/")[5]) for j in soup.find_all('loc')]
