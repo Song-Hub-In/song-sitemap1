@@ -23,9 +23,6 @@ if len(os.listdir("sitemap/")) < 10:
     Song_ID = [str(str(j).split("/")[5]) for j in soup.find_all('loc')]
 
     for i in range(int(len(Song_ID)/100)+1):
-        # Serializing json
-        json_object = dumps(Song_ID[100*i:100*(i+1)])
-
         # Writing to sample.json
         with open('sitemap/'+str(i)+'.txt', "w") as outfile:
             for id in Song_ID[100*i:100*(i+1)]:
